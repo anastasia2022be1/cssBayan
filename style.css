@@ -5,14 +5,14 @@
 }
 
 body {
-    font-family: serif;
-    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
     background-color: #fff;
 }
 
-summary::-webkit-details-marker {
-display: none;
-}
+details summary::-webkit-details-marker {
+    display: none;
+  }
 
 .wrapper {
     display: flex;
@@ -35,8 +35,9 @@ display: none;
 
 .accordion__title {
     text-align: center;
+    font-size: xx-large;
     width: 100%;
-    background-color: aquamarine;
+    background-color: #667470;
     outline: none;
     cursor: pointer;
     border-bottom: 1px solid #777;
@@ -63,6 +64,9 @@ display: none;
     transition: 0.5s all;
 }
 
+.accordion__item:not([open]):last-child .accordion__title::after {
+    border-bottom: 1px solid transparent;
+}
 .accordion__body {
     padding: auto;
 }
